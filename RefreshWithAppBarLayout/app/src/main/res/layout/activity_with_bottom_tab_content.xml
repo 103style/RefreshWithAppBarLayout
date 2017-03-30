@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+ ~ create by luoxiaoke 2017/3/30 10:59
+ ~ eamil:wtimexiaoke@gmail.com
+ ~ github:https://github.com/103style
+ ~ csdn:http://blog.csdn.net/lxk_1993
+ ~ 简书：http://www.jianshu.com/u/109656c2d96f 
+-->
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/app_bar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:contentDescription="@null"
+                android:src="@mipmap/image_show" />
+        </android.support.design.widget.CollapsingToolbarLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@color/colorPrimaryDark"
+            android:gravity="center"
+            android:text="悬停栏"
+            android:textColor="@android:color/white"
+            android:textSize="16sp" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycle_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+</android.support.design.widget.CoordinatorLayout>

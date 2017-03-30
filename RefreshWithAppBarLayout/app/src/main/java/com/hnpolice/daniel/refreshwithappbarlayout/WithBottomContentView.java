@@ -1,0 +1,74 @@
+package com.hnpolice.daniel.refreshwithappbarlayout;
+
+import android.content.Context;
+import android.util.AttributeSet;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.widget.FrameLayout;
+
+import net.yuntutv.luoxiaoke.refreshlibrary.PullToRefreshBase;
+
+/**
+ * create by luoxiaoke 2017/3/30 11:01
+ * eamil:wtimexiaoke@gmail.com
+ * github:https://github.com/103style
+ * csdn:http://blog.csdn.net/lxk_1993
+ * 简书：http://www.jianshu.com/u/109656c2d96f
+ */
+public class WithBottomContentView extends PullToRefreshBase<FrameLayout> {
+
+    /**
+     * 判断是否可以刷新 or 是否拦截点击事件
+     */
+    private boolean canRefresh;
+
+    public WithBottomContentView(Context context) {
+        this(context, null);
+    }
+
+    public WithBottomContentView(Context context, AttributeSet attrs) {
+        this(context, attrs, 0);
+    }
+
+    public WithBottomContentView(Context context, AttributeSet attrs, int defStyleAttr) {
+        super(context, attrs, defStyleAttr);
+
+        //初始为可刷新
+        canRefresh = true;
+    }
+
+    /**
+     * 判断是否可以刷新 or 是否拦截点击事件
+     *
+     * @param canRefresh true 拦截   false 不拦截
+     */
+    public void setCanRefresh(boolean canRefresh) {
+        this.canRefresh = canRefresh;
+    }
+
+    /**
+     * 设置布局内容
+     */
+    @Override
+    protected FrameLayout createRefreshableView(Context context, AttributeSet attrs) {
+        FrameLayout frameLayout = new FrameLayout(context);
+        View v = LayoutInflater.from(context).inflate(R.layout.activity_with_bottom_tab_content, null);
+        v.measure(View.MeasureSpec.AT_MOST, View.MeasureSpec.AT_MOST);
+        frameLayout.addView(v);
+        return frameLayout;
+    }
+
+    @Override
+    protected boolean isReadyForPullDown() {
+        return canRefresh;
+    }
+
+    /**
+     * 没有做加载
+     * 要实现可以参考： http://blog.csdn.net/leehong2005/article/details/12567757
+     */
+    @Override
+    protected boolean isReadyForPullUp() {
+        return false;
+    }
+}

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="pull_to_refresh_header_text_color">#999999</color>
+    <color name="pull_to_load_footer_text_color">#999999</color>
+</resources>

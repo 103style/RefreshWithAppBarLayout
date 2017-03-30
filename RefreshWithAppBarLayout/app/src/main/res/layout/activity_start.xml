@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+ ~ create by luoxiaoke 2017/3/30 10:59
+ ~ eamil:wtimexiaoke@gmail.com
+ ~ github:https://github.com/103style
+ ~ csdn:http://blog.csdn.net/lxk_1993
+ ~ 简书：http://www.jianshu.com/u/109656c2d96f 
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv1"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+        android:text="NoBottomTab"
+        android:textColor="@android:color/white"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/tv2"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+        android:text="WithBotttomTab"
+        android:textColor="@android:color/white"
+        android:textSize="16sp" />
+</LinearLayout>
