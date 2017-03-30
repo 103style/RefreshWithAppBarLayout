@@ -35,7 +35,7 @@ CSDN链接：http://blog.csdn.net/lxk_1993/article/details/68484922
 
 ### 实现步骤
 
-* 去这里 [github]() 或 [csdn]()下载源码.
+* 去这里 [github](https://github.com/103style/RefreshWithAppBarLayout) 或 [csdn](http://download.csdn.net/download/lxk_1993/9798704)下载源码.
 
 
 * 把项目中的refreshlibray 库添加到项目中，然后添加依赖，或者直接复制里面的 Java、anim、drawable–xxhdpi、layout这几个文件下的文件和values下的pull_refresh_colors和pull_refresh_strings. 如图
