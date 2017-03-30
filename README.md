@@ -1,6 +1,7 @@
 # RefreshWithAppBarLayout
 RefreshWithAppBarLayout
 
+觉得不错就点下右上角的Star吧
 
 简书链接：http://www.jianshu.com/p/66a4e1377ca8
 
